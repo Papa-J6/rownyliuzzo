@@ -1,41 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport"
-content="width=device-width, initial scale="1.0"/>
-  <title>Rowny Liuzzo-Portfolio</title>
-  <link rel="stylesheet"
-href="styles.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rowny Liuzzo | Software Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    .hero-bg { background: linear-gradient(135deg, #1e3a8a, #3b82f6); }
+  </style>
 </head>
-<body>
-   <header>
-     <h1>Rowny Liuzzo</h1>
-     <p>Computer science student|Aspiring software developer</p>
-     </header>
-     <section id="about">
-     <h2>About me</h2>
-     <p>Hello! I'm Rowny, a passionate computer science student from Embu, Kenya. I love coding, solving problems, and learning new tech skills. Looking forward to building innovative solutions!</p>
-     </section>
-     <section id="skills">
-       <h2>Skills</h2>
-       <ul>
-         <li>Programming: Python, java, c++ </li>
-         <li>Web Development: HTML, CSS, JavaScript</li>
-         <li>Tools: Git, Visual studio code</li>
-         <li>Soft skills: Problem solving, Teamwork, Communication</li>
-       </ul>
-     </section>
-     <section id="contact">
-     <h2>Contact</h2>
-     <p>Email: rownyliuzzo@gmail.com</p>
-     <p>Phone:+254718031707</p>
-     <p>LinkedIn:www.linkedin.com/in/rowny-liuzzo</p>
-     </section>
-     <footer>
-       <p>&copy:2025 Rowny Liuzzo</p>
-     </footer>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Hero Section -->
+  <section class="hero-bg text-white py-24">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">Rowny Liuzzo</h1>
+      <p class="text-2xl md:text-3xl mb-6">Computer Science Student & Aspiring Software Developer</p>
+      <p class="text-lg max-w-2xl mx-auto mb-8">
+        Building practical solutions for real problems in Kenya — from AgriConnect to MediFlow Hospital System.
+      </p>
+      <a href="#projects" class="bg-white text-blue-700 font-semibold px-8 py-4 rounded-xl hover:bg-gray-100 transition">
+        View My Projects →
+      </a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">About Me</h2>
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto text-center">
+        Hello! I'm Rowny, a passionate Computer Science student from Embu, Kenya. 
+        I love turning ideas into functional applications. Currently building real-world systems 
+        like <strong>AgriConnect</strong> (farmer marketplace) and <strong>MediFlow Kenya</strong> (Hospital Management System).
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects (Most Important) -->
+  <section id="projects" class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Project 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+          <div class="h-48 bg-blue-600 flex items-center justify-center">
+            <span class="text-white text-4xl font-bold">🌾</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-xl mb-2">AgriConnect</h3>
+            <p class="text-gray-600 mb-4">Connecting Embu farmers directly to buyers with real-time market prices.</p>
+            <a href="#" class="text-blue-600 hover:underline">View Project →</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition">
+          <div class="h-48 bg-emerald-600 flex items-center justify-center">
+            <span class="text-white text-4xl font-bold">🏥</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-xl mb-2">MediFlow Kenya</h3>
+            <p class="text-gray-600 mb-4">Full-featured Hospital Management System with Patient Registration, Appointments, Billing & SHA support.</p>
+            <a href="#" class="text-blue-600 hover:underline">View Project →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">Skills & Technologies</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="bg-gray-100 p-6 rounded-xl">PHP / Laravel</div>
+        <div class="bg-gray-100 p-6 rounded-xl">JavaScript / Livewire</div>
+        <div class="bg-gray-100 p-6 rounded-xl">Tailwind CSS</div>
+        <div class="bg-gray-100 p-6 rounded-xl">MySQL</div>
+        <div class="bg-gray-100 p-6 rounded-xl">FilamentPHP</div>
+        <div class="bg-gray-100 p-6 rounded-xl">Git & GitHub</div>
+        <div class="bg-gray-100 p-6 rounded-xl">Python</div>
+        <div class="bg-gray-100 p-6 rounded-xl">Problem Solving</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="py-16 bg-gray-900 text-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6">Let's Connect</h2>
+      <p class="mb-8">Open to internships, freelance work, or collaborations</p>
+      <div class="flex justify-center gap-6 text-3xl">
+        <a href="mailto:rownyliuzzo@gmail.com">📧</a>
+        <a href="https://linkedin.com/in/rowny-liuzzo">🔗</a>
+        <a href="https://github.com/rownyliuzzo">🐙</a>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
-
- 
