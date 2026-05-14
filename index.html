@@ -3,31 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rowny Liuzzo - Computer Science Student & Aspiring Software Developer from Embu, Kenya. Experienced in Laravel, FilamentPHP, and building real-world systems.">
+  <meta name="description" content="Rowny Liuzzo - Computer Science Student & Software Developer from Embu, Kenya. Building AgriConnect and MediFlow Kenya.">
   <title>Rowny Liuzzo | Software Developer</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
-    .hero-bg { background: linear-gradient(135deg, #1e40af, #3b82f6); }
-    .project-card { transition: all 0.3s ease; }
-    .project-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+    .hero-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+    .project-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .project-card:hover { transform: translateY(-12px) scale(1.03); }
   </style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body class="bg-gray-50">
 
   <!-- Hero -->
-  <section class="hero-bg text-white py-28">
+  <section class="hero-bg text-white py-28 md:py-32">
     <div class="max-w-6xl mx-auto px-6 text-center">
-      <h1 class="text-5xl md:text-6xl font-bold mb-4">Rowny Liuzzo</h1>
+      <h1 class="text-5xl md:text-7xl font-bold mb-4">Rowny Liuzzo</h1>
       <p class="text-2xl md:text-3xl mb-6">Computer Science Student & Software Developer</p>
-      <p class="max-w-2xl mx-auto text-lg mb-10">
-        Passionate about building practical digital solutions for real problems in Kenya.
+      <p class="max-w-2xl mx-auto text-lg md:text-xl mb-10">
+        From Embu, Kenya — Building real-world solutions that solve local problems.
       </p>
-      <div class="flex justify-center gap-4">
-        <a href="#projects" class="bg-white text-blue-700 px-8 py-4 rounded-2xl font-semibold hover:bg-gray-100 transition">
-          View Projects
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#projects" class="bg-white text-blue-700 px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-gray-100 transition">
+          View My Projects
         </a>
-        <a href="#contact" class="border border-white px-8 py-4 rounded-2xl font-semibold hover:bg-white/10 transition">
+        <a href="#contact" class="border-2 border-white px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition">
           Contact Me
         </a>
       </div>
@@ -36,13 +36,14 @@
 
   <!-- About -->
   <section class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-10">About Me</h2>
-      <div class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed text-center">
-        Hello! I'm Rowny, a Computer Science student from Embu, Kenya. 
-        I specialize in full-stack web development with a focus on building scalable, real-world applications. 
-        My recent projects include <strong>AgriConnect</strong> (Farmer Marketplace) and <strong>MediFlow Kenya</strong> (Hospital Management System).
-      </div>
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto text-center leading-relaxed">
+        Hello! I'm Rowny, a passionate Computer Science student from Embu, Kenya. 
+        I specialize in full-stack development with Laravel and FilamentPHP. 
+        I recently built <strong>AgriConnect</strong> (farmer marketplace) and <strong>MediFlow Kenya</strong> 
+        (Hospital Management System) — both designed for real-world use in Kenya.
+      </p>
     </div>
   </section>
 
@@ -54,36 +55,34 @@
       <div class="grid md:grid-cols-2 gap-10">
 
         <!-- AgriConnect -->
-        <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg">
-          <div class="h-64 bg-gradient-to-br from-green-600 to-emerald-700 flex items-center justify-center">
-            <span class="text-7xl">🌾</span>
-          </div>
+        <div class="project-card bg-white rounded-3xl overflow-hidden shadow-xl">
+          <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449" 
+               alt="AgriConnect" class="w-full h-64 object-cover">
           <div class="p-8">
-            <h3 class="text-2xl font-semibold mb-3">AgriConnect</h3>
-            <p class="text-gray-600 mb-6">Connecting smallholder farmers in Embu directly with buyers through real-time market prices and listings. Zero commission marketplace.</p>
-            <div class="flex gap-3">
-              <span class="bg-green-100 text-green-700 text-sm px-4 py-1 rounded-full">Laravel</span>
-              <span class="bg-green-100 text-green-700 text-sm px-4 py-1 rounded-full">Tailwind</span>
-              <span class="bg-green-100 text-green-700 text-sm px-4 py-1 rounded-full">MySQL</span>
+            <h3 class="text-2xl font-bold mb-2">AgriConnect</h3>
+            <p class="text-gray-600 mb-4">Connecting smallholder farmers in Embu directly to buyers with real-time market intelligence and zero-commission sales.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Laravel</span>
+              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Tailwind</span>
+              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">MySQL</span>
             </div>
-            <a href="#" class="mt-6 inline-block text-blue-600 font-medium hover:underline">View Project →</a>
+            <a href="#" class="text-blue-600 font-medium hover:underline">View Live Project →</a>
           </div>
         </div>
 
         <!-- MediFlow Kenya -->
-        <div class="project-card bg-white rounded-3xl overflow-hidden shadow-lg">
-          <div class="h-64 bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center">
-            <span class="text-7xl">🏥</span>
-          </div>
+        <div class="project-card bg-white rounded-3xl overflow-hidden shadow-xl">
+          <img src="https://images.unsplash.com/photo-1584982751609-1f9b4c4b4b4b" 
+               alt="MediFlow Kenya" class="w-full h-64 object-cover">
           <div class="p-8">
-            <h3 class="text-2xl font-semibold mb-3">MediFlow Kenya</h3>
-            <p class="text-gray-600 mb-6">Complete Hospital Management System with Patient Registration, Appointments, Billing (M-Pesa & SHA), Medical Records, and Role-Based Access.</p>
-            <div class="flex gap-3">
-              <span class="bg-blue-100 text-blue-700 text-sm px-4 py-1 rounded-full">Laravel</span>
-              <span class="bg-blue-100 text-blue-700 text-sm px-4 py-1 rounded-full">FilamentPHP</span>
-              <span class="bg-blue-100 text-blue-700 text-sm px-4 py-1 rounded-full">Livewire</span>
+            <h3 class="text-2xl font-bold mb-2">MediFlow Kenya</h3>
+            <p class="text-gray-600 mb-4">Full-featured Hospital Management System with Patient Registration, Appointments, Billing (M-Pesa & SHA), Medical Records & Role-Based Access.</p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Laravel</span>
+              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">FilamentPHP</span>
+              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Livewire</span>
             </div>
-            <a href="#" class="mt-6 inline-block text-blue-600 font-medium hover:underline">View Project →</a>
+            <a href="#" class="text-blue-600 font-medium hover:underline">View Live Project →</a>
           </div>
         </div>
 
@@ -95,40 +94,35 @@
   <section class="py-20 bg-white">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-12">Skills & Technologies</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div class="bg-gray-100 py-6 rounded-2xl">PHP / Laravel</div>
-        <div class="bg-gray-100 py-6 rounded-2xl">FilamentPHP</div>
-        <div class="bg-gray-100 py-6 rounded-2xl">Tailwind CSS</div>
-        <div class="bg-gray-100 py-6 rounded-2xl">Livewire + Alpine.js</div>
-        <div class="bg-gray-100 py-6 rounded-2xl">MySQL</div>
-        <div class="bg-gray-100 py-6 rounded-2xl">Git & GitHub</div>
-        <div class="bg-gray-100 py-6 rounded-2xl">Python</div>
-        <div class="bg-gray-100 py-6 rounded-2xl">Problem Solving</div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-gray-100 p-6 rounded-2xl text-center font-medium">Laravel</div>
+        <div class="bg-gray-100 p-6 rounded-2xl text-center font-medium">FilamentPHP</div>
+        <div class="bg-gray-100 p-6 rounded-2xl text-center font-medium">Tailwind CSS</div>
+        <div class="bg-gray-100 p-6 rounded-2xl text-center font-medium">Livewire</div>
+        <div class="bg-gray-100 p-6 rounded-2xl text-center font-medium">MySQL</div>
+        <div class="bg-gray-100 p-6 rounded-2xl text-center font-medium">Git & GitHub</div>
+        <div class="bg-gray-100 p-6 rounded-2xl text-center font-medium">PHP</div>
+        <div class="bg-gray-100 p-6 rounded-2xl text-center font-medium">Problem Solving</div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-20 bg-gray-900 text-white">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-6">Let's Connect</h2>
-      <p class="mb-10 text-lg">Open to internships, freelance opportunities, and collaborations</p>
-      
-      <div class="flex justify-center gap-8 text-4xl mb-12">
-        <a href="mailto:rown yliuzzo@gmail.com" class="hover:text-blue-400 transition"><i class="fa fa-envelope"></i></a>
-        <a href="https://linkedin.com/in/rowny-liuzzo" class="hover:text-blue-400 transition"><i class="fa fa-linkedin"></i></a>
-        <a href="https://github.com/rownyliuzzo" class="hover:text-blue-400 transition"><i class="fa fa-github"></i></a>
-      </div>
-
-      <p class="text-sm text-gray-400">Embu, Kenya • +254 718 031 707</p>
+  <!-- CTA -->
+  <section class="py-20 bg-blue-600 text-white text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-6">Ready to Work Together?</h2>
+      <p class="text-xl mb-8">I'm currently open to internships, freelance projects, and full-time opportunities.</p>
+      <a href="#contact" class="inline-block bg-white text-blue-600 px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-gray-100">
+        Get In Touch
+      </a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-black text-gray-400 py-12">
+  <footer class="bg-gray-900 text-gray-400 py-12">
     <div class="max-w-6xl mx-auto px-6 text-center">
-      <p>&copy; 2026 Rowny Liuzzo. Built with passion in Kenya.</p>
-      <p class="text-sm mt-2">Currently seeking Software Development opportunities</p>
+      <p class="mb-2">© 2026 Rowny Liuzzo. Built with passion in Embu, Kenya.</p>
+      <p class="text-sm">Currently seeking Software Development roles and opportunities.</p>
     </div>
   </footer>
 </body>
