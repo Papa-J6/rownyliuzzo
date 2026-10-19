@@ -1,51 +1,280 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Portfolio of Rowny Liuzzo, Computer Science student at the University of Embu.">
-<meta name="theme-color" content="#0b1220">
-<title>Rowny Liuzzo | Computer Science Student & Developer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<title>Rowny Liuzzo | Computer Science Student and Developer</title>
+<meta name="description" content="Portfolio of Rowny Liuzzo, a Computer Science student at the University of Embu seeking an internship in software development, ICT, cloud or AI.">
+<meta name="theme-color" content="#1F3A5F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231F3A5F'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Georgia,serif' font-weight='700' fill='white' text-anchor='middle'%3ERL%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#F7F9FB; --surface:#FFFFFF; --ink:#142033; --muted:#52627A; --line:#D8E0EA;
+  --navy:#1F3A5F; --accent:#2B6CB0; --accent-ink:#FFFFFF; --tag:#E6EEF8; --tag-ink:#1F3A5F;
+  --serif:Charter,"Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1826; --surface:#162235; --ink:#E8EEF6; --muted:#A3B2C7; --line:#27364D;
+    --navy:#9CC2EE; --accent:#5AA0E6; --accent-ink:#0F1826; --tag:#21324B; --tag-ink:#CFE2F8;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1826; --surface:#162235; --ink:#E8EEF6; --muted:#A3B2C7; --line:#27364D;
+  --navy:#9CC2EE; --accent:#5AA0E6; --accent-ink:#0F1826; --tag:#21324B; --tag-ink:#CFE2F8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-text-size-adjust:100%}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--navy);color:var(--bg);padding:8px 14px;border-radius:6px;z-index:20}
+.skip:focus{left:8px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+
+header.nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.brand{font-family:var(--serif);font-weight:700;font-size:1.15rem;color:var(--navy);text-decoration:none}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.nav ul a{color:var(--ink);text-decoration:none;font-size:.95rem}
+.nav ul a:hover{color:var(--accent)}
+@media(max-width:560px){.nav ul{gap:14px}.nav ul a{font-size:.88rem}}
+
+.hero{padding:76px 0 56px}
+.hero h1{font-family:var(--serif);font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.04;margin:0 0 18px;color:var(--navy);letter-spacing:-.02em}
+.hero .lead{font-size:clamp(1.15rem,2.4vw,1.45rem);line-height:1.45;max-width:36em;margin:0 0 14px}
+.hero .status{color:var(--muted);margin:0 0 30px;max-width:40em}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent);background:transparent}
+.btn:hover{filter:brightness(1.08)}
+
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.4rem);line-height:1.15;margin:0 0 10px;color:var(--navy)}
+.intro{color:var(--muted);max-width:40em;margin:0 0 36px}
+
+.project{display:grid;grid-template-columns:270px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-bottom:28px;overflow:hidden}
+.project .rail{background:var(--tag);padding:26px 24px;border-right:1px solid var(--line)}
+.project .rail h3{font-family:var(--serif);font-size:1.35rem;line-height:1.2;margin:0 0 4px;color:var(--navy)}
+.project .rail .kind{margin:0 0 20px;color:var(--muted);font-size:.95rem}
+dl{margin:0}
+dt{font-size:.85rem;color:var(--muted);margin-top:14px}
+dd{margin:2px 0 0;font-weight:600;font-size:.97rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chips span{background:var(--surface);color:var(--tag-ink);border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:.84rem;font-weight:600}
+.project .story{padding:26px 30px}
+.story h4{font-size:1rem;margin:0 0 4px;color:var(--navy)}
+.story p{margin:0 0 18px;max-width:62ch}
+.story p:last-of-type{margin-bottom:0}
+.story ul{margin:0 0 18px;padding-left:20px;max-width:62ch}
+.links{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.links .note{color:var(--muted);font-size:.92rem}
+.btn.small{padding:8px 16px;font-size:.95rem}
+@media(max-width:780px){
+  .project{grid-template-columns:1fr}
+  .project .rail{border-right:0;border-bottom:1px solid var(--line)}
+  .project .story{padding:22px 22px}
+}
+
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+@media(max-width:780px){.cols{grid-template-columns:1fr;gap:36px}}
+.cols h3{font-family:var(--serif);font-size:1.3rem;margin:0 0 14px;color:var(--navy)}
+.entry{margin-bottom:22px}
+.entry strong{display:block}
+.entry .when{color:var(--muted);font-size:.93rem;margin-bottom:6px}
+.entry ul{margin:0;padding-left:20px}
+.entry li{margin-bottom:4px}
+
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:780px){.skills{grid-template-columns:1fr}}
+.skill{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.skill h3{font-size:1.02rem;margin:0 0 6px;color:var(--navy)}
+.skill p{margin:0}
+.skill .proof{color:var(--muted);font-size:.93rem;margin-top:4px}
+
+.contact p{max-width:40em;margin:0 0 22px}
+footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="header"><div class="container nav">
-<a class="brand" href="#home"><span class="mark">RL</span> ROWNY LIUZZO</a>
-<nav><a href="#projects">Projects</a><a href="#about">About</a><a href="#skills">Skills</a><a class="nav-cta" href="#contact">Contact ↗</a></nav>
-</div></header>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Rowny Liuzzo</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#background">Background</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 <main id="main">
-<section class="hero" id="home"><div class="container hero-grid">
-<div>
-<p class="eyebrow"><span class="dot"></span> COMPUTER SCIENCE STUDENT · EMBU, KENYA</p>
-<h1>I turn ideas into <span class="gradient">practical technology.</span></h1>
-<p class="lede">I’m a Computer Science student at the University of Embu learning by building web and desktop applications, working with databases, and solving problems one project at a time.</p>
-<div class="actions"><a class="btn primary" href="#projects">Explore my projects ↓</a><a class="btn secondary" href="mailto:rownyliuzzo@gmail.com">Get in touch ↗</a></div>
-<div class="meta"><span>⌘ Web & desktop projects</span><span>◎ Open to internship learning opportunities</span></div>
+<div class="hero" id="top">
+  <div class="wrap">
+    <h1>Rowny Liuzzo</h1>
+    <p class="lead">Computer Science student at the University of Embu, building web and desktop applications from the database to deployment.</p>
+    <p class="status">I am looking for an internship in software development, ICT, cloud computing or AI. I am currently learning cloud, Linux, Python and machine learning.</p>
+    <div class="btns">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn ghost" href="Rowny_Liuzzo_Internship_CV.pdf">Download my CV</a>
+    </div>
+  </div>
 </div>
-<div class="art" aria-label="Illustration of a code editor">
-<div class="orbit one"></div><div class="orbit two"></div>
-<div class="window"><div class="windowbar"><i></i><i></i><i></i><small>building.js</small></div>
-<div class="code"><p><em>01</em> <b>const</b> developer = {</p><p><em>02</em> &nbsp; mindset: <strong>'keep learning'</strong>,</p><p><em>03</em> &nbsp; approach: <strong>'build and improve'</strong>,</p><p><em>04</em> &nbsp; focus: [</p><p><em>05</em> &nbsp;&nbsp; <strong>'web apps'</strong>,</p><p><em>06</em> &nbsp;&nbsp; <strong>'databases'</strong>,</p><p><em>07</em> &nbsp;&nbsp; <strong>'problem solving'</strong></p><p><em>08</em> &nbsp; ]</p><p><em>09</em> };</p></div><div class="windowfoot">● learning through projects <span>●</span></div></div>
-<div class="chip chip1"><b>01</b> Web applications</div><div class="chip chip2"><b>02</b> Java · Databases</div>
-</div></div></section>
-<section class="section projects" id="projects"><div class="container">
-<div class="section-head"><div><p class="eyebrow">SELECTED WORK / 01—03</p><h2>Projects built by <span class="muted">doing the work.</span></h2></div><p class="intro">Each project represents a different part of my learning: web development, application workflows, and object-oriented programming.</p></div>
-<div class="project-grid">
-<article class="card"><div class="visual agri"><span class="label">GROUP PROJECT</span><span class="index">01 / 03</span><div class="sun"></div><div class="hills"></div><div class="plant p1">✦</div><div class="plant p2">✦</div><div class="produce"><b>✳</b><span>AgriConnect<small>Farm to market</small></span></div></div><div class="cardbody"><p class="type">WEB APPLICATION · PHP / SQL</p><h3>AgriConnect</h3><p>A group project exploring how a digital platform can connect farmers and buyers. I initiated the idea and took responsibility for much of the coding and implementation.</p><div class="tags"><span>PHP</span><span>SQL</span><span>HTML & CSS</span><span>JavaScript</span><span>Bootstrap</span></div><ul><li>Worked across the interface, server-side logic, and database features.</li><li>Implemented user interaction and messaging-related functionality.</li><li>Practised debugging database, session, and deployment issues.</li></ul><div class="projectlinks"><a href="https://agriconnect-rowny.infinityfreeapp.com/" target="_blank" rel="noopener">Try demo ↗</a><small>Demo availability may vary</small></div></div></article>
-<article class="card"><div class="visual med"><span class="label">PERSONAL PROTOTYPE</span><span class="index">02 / 03</span><div class="dashboard"><aside><b>m.</b><span>▦</span><span>♙</span><span>▤</span><span>⌁</span></aside><div class="dashcontent"><small>OVERVIEW</small><h4>Clinic dashboard</h4><div class="stats"><span>Patients<b>Patient list</b></span><span>Appointments<b>Schedule</b></span><span>Records<b>Medical</b></span></div><div class="chart"><b>Activity overview</b><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div></div><div class="cardbody"><p class="type">CLINIC MANAGEMENT · AI-ASSISTED DEVELOPMENT</p><h3>MediFlow Kenya</h3><p>A personal clinic-management prototype built with Laravel/PHP, with AI-assisted support during development. It explores common clinic workflows through a patient-facing page and admin dashboard.</p><div class="tags"><span>Laravel / PHP</span><span>Database workflows</span><span>Admin dashboard</span></div><ul><li>Explored patient registration and appointment booking flows.</li><li>Created dashboard areas for patients, doctors, records, lab, pharmacy, and more.</li><li>Used AI as a development aid while iterating on the application.</li></ul><div class="projectlinks"><a href="https://mediflow-kenya.onrender.com/" target="_blank" rel="noopener">Open prototype ↗</a><small>Not for real patient data</small></div></div></article>
-<article class="card bankcard"><div class="visual bank"><span class="label">INDIVIDUAL PROJECT</span><span class="index">03 / 03</span><div class="bankui"><div class="bankhead"><b>B</b><span>EMBER BANK<small>ACCOUNT OVERVIEW</small></span></div><div class="balance"><small>AVAILABLE BALANCE</small><strong>••••••••</strong><small>ACCOUNT HOLDER</small><b>Customer account</b></div><div class="bankactions"><span>＋ Deposit</span><span>↗ Transfer</span><span>↙ Withdraw</span></div><hr><small>Recent activity</small><div class="fake-line"></div><div class="fake-line short"></div></div></div><div class="cardbody"><p class="type">DESKTOP APPLICATION · JAVA</p><h3>Embu Bank System</h3><p>An individual Java desktop banking application built with Swing and an H2 database. This project gave me practice connecting a graphical interface to stored data.</p><div class="tags"><span>Java</span><span>Java Swing</span><span>H2 Database</span><span>OOP</span></div><ul><li>Built a desktop interface for banking-related operations.</li><li>Practised object-oriented programming and database integration.</li><li>Worked through testing and debugging during development.</li></ul><div class="projectlinks"><span>Individual build ✦</span><small>Source/demo link not yet added</small></div></div></article>
-</div></div></section>
-<section class="section about" id="about"><div class="container aboutgrid"><div><p class="eyebrow">A LITTLE ABOUT ME / 04</p><h2>Learning by building.<br><span class="muted">Growing with every iteration.</span></h2></div><div class="aboutcopy"><p>I’m pursuing a BSc in Computer Science at the University of Embu. I enjoy turning ideas into working prototypes and learning how the parts of an application fit together—from the interface to the database.</p><p>I’m still strengthening my programming foundations, and I treat each project as a chance to understand more, debug better, and become more independent as a developer. I also use AI tools as assistants while continuing to learn the code and decisions behind the work.</p><div class="callout"><b>↳</b><p><strong>What I’m looking for</strong><br>Internship opportunities where I can contribute, learn from experienced people, and grow my practical software and ICT skills.</p></div></div></div></section>
-<section class="section skills" id="skills"><div class="container"><div class="section-head"><div><p class="eyebrow">TOOLS & FOUNDATIONS / 05</p><h2>What I’ve been <span class="muted">working with.</span></h2></div><p class="intro">Technologies used in my projects and topics I’m continuing to develop.</p></div><div class="skillsgrid">
-<div class="skill"><small>01</small><h3>Web development</h3><p>PHP, JavaScript, HTML, CSS, Bootstrap</p><div class="meter"><i style="width:76%"></i></div><label>Used in web project work</label></div>
-<div class="skill"><small>02</small><h3>Programming</h3><p>Java, object-oriented programming</p><div class="meter"><i style="width:58%"></i></div><label>Building confidence through practice</label></div>
-<div class="skill"><small>03</small><h3>Databases</h3><p>SQL, MySQL concepts, H2 database</p><div class="meter"><i style="width:65%"></i></div><label>Queries and application integration</label></div>
-<div class="skill"><small>04</small><h3>Developer workflow</h3><p>Git, GitHub, debugging, deployment basics</p><div class="meter"><i style="width:60%"></i></div><label>Learning through iteration</label></div>
-</div><p class="footnote">Skill bars are visual summaries of my current learning focus, not formal proficiency scores.</p></div></section>
-<section class="section contact" id="contact"><div class="container contactbox"><div class="decoration">↗</div><p class="eyebrow">HAVE AN OPPORTUNITY? / 06</p><h2>Let’s connect and<br><span class="gradient">keep building.</span></h2><p class="contactcopy">I’m happy to connect with developers, mentors, fellow students, and teams offering internship or learning opportunities.</p><div class="actions center"><a class="btn primary" href="mailto:rownyliuzzo@gmail.com">rownyliuzzo@gmail.com ↗</a><a class="btn secondary" href="https://www.linkedin.com/in/rowny-liuzzo" target="_blank" rel="noopener">LinkedIn ↗</a><a class="btn secondary" href="https://github.com/papa-j6" target="_blank" rel="noopener">GitHub ↗</a></div></div></section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="intro">Three projects I built. For each one I explain what it does, what my part was and a problem I had to solve.</p>
+
+    <article class="project">
+      <div class="rail">
+        <h3>AgriConnect</h3>
+        <p class="kind">Farmer and buyer marketplace</p>
+        <dl>
+          <dt>My role</dt><dd>Lead developer, group project</dd>
+          <dt>When</dt><dd>March to April 2026</dd>
+          <dt>Built with</dt>
+          <dd><div class="chips"><span>PHP</span><span>SQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span></div></dd>
+        </dl>
+      </div>
+      <div class="story">
+        <h4>The problem</h4>
+        <p>Smallholder farmers in Embu County often depend on middlemen to reach buyers.</p>
+        <h4>What I built</h4>
+        <p>A web platform where farmers and buyers can create accounts, and buyers can contact farmers directly through messaging. It also includes administrator features.</p>
+        <h4>My part</h4>
+        <p>I proposed the idea and developed the front end, the back end and the database for the group.</p>
+        <h4>A problem I solved</h4>
+        <p>After I deployed the site on free hosting, I found and fixed errors with database connections, user sessions and server-side requests.</p>
+        <div class="links">
+          <span class="note">The live demo is offline because the free hosting plan stopped working. A rebuild with more reliable hosting is planned.</span>
+          <!-- Add when your repository is public: <a class="btn small ghost" href="https://github.com/papa-j6/REPO-NAME">Source code</a> -->
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="rail">
+        <h3>MediFlow Kenya</h3>
+        <p class="kind">Clinic management prototype</p>
+        <dl>
+          <dt>My role</dt><dd>Personal project, built alone</dd>
+          <dt>When</dt><dd>April to June 2026</dd>
+          <dt>Built with</dt>
+          <dd><div class="chips"><span>Laravel</span><span>PHP</span><span>SQL</span></div></dd>
+        </dl>
+      </div>
+      <div class="story">
+        <h4>The idea</h4>
+        <p>Explore how a small clinic could manage patients, appointments and departments in one system.</p>
+        <h4>What I built</h4>
+        <ul>
+          <li>A patient-facing page for registration and booking appointments.</li>
+          <li>An administrative dashboard covering patients, doctors, appointments, medical records, laboratory, pharmacy, finance and ward management.</li>
+        </ul>
+        <h4>How I built it</h4>
+        <p>I used Claude as an AI coding assistant while building and debugging, and I deployed the prototype on Render.</p>
+        <div class="links">
+          <a class="btn small primary" href="https://mediflow-kenya.onrender.com/">Open the prototype</a>
+          <span class="note">The first load can take about a minute on the free plan. This is a prototype, so please do not enter real patient data.</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="rail">
+        <h3>Embu Bank System</h3>
+        <p class="kind">Java desktop banking application</p>
+        <dl>
+          <dt>My role</dt><dd>Individual project</dd>
+          <dt>When</dt><dd>February 2026</dd>
+          <dt>Built with</dt>
+          <dd><div class="chips"><span>Java</span><span>Swing</span><span>H2 database</span><span>OOP</span></div></dd>
+        </dl>
+      </div>
+      <div class="story">
+        <h4>The idea</h4>
+        <p>Practise connecting a graphical interface to stored data by simulating core banking operations.</p>
+        <h4>What I built</h4>
+        <p>A desktop application with a Java Swing interface. It uses object-oriented design and an H2 database to store and retrieve data.</p>
+        <h4>A problem I solved</h4>
+        <p>I tested the application and fixed compilation, database and runtime errors as they appeared.</p>
+        <!-- Add when your repository is public: <div class="links"><a class="btn small ghost" href="https://github.com/papa-j6/REPO-NAME">Source code</a></div> -->
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="background">
+  <div class="wrap cols">
+    <div>
+      <h3>Experience</h3>
+      <div class="entry">
+        <strong>Career Peer Advisor</strong>
+        <div class="when">University of Embu Careers Services, September 2025 to present</div>
+        <ul>
+          <li>Mentor 20+ students on career planning, internship applications and skills development.</li>
+          <li>Run workshops on CV writing, interview preparation and professional communication.</li>
+          <li>Support mock interviews and create posters, flyers and social media content for career events.</li>
+        </ul>
+      </div>
+      <h3>How I work</h3>
+      <p>I use AI tools as an assistant and say so on each project. I keep learning the code and decisions behind my work.</p>
+    </div>
+    <div>
+      <h3>Education</h3>
+      <div class="entry">
+        <strong>BSc Computer Science, University of Embu</strong>
+        <div class="when">September 2024 to September 2028 (expected), now in Year 3</div>
+        <p>Coursework: Data Structures and Algorithms, Artificial Intelligence, Computer Architecture, Web Programming, System Analysis and Design.</p>
+      </div>
+      <h3>Certifications</h3>
+      <div class="entry">
+        <ul>
+          <li>AI Literacy, IBM SkillsBuild (May 2026)</li>
+          <li>Getting Started with Cybersecurity, IBM SkillsBuild (September 2026)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="intro">Each skill shows where I have used it.</p>
+    <div class="skills">
+      <div class="skill"><h3>Web development</h3><p>PHP, Laravel, JavaScript, HTML, CSS, Bootstrap</p><p class="proof">Used in AgriConnect, MediFlow Kenya and this site</p></div>
+      <div class="skill"><h3>Databases</h3><p>SQL, MySQL, H2</p><p class="proof">Used in all three projects</p></div>
+      <div class="skill"><h3>Programming</h3><p>Java and object-oriented programming</p><p class="proof">Used in Embu Bank System</p></div>
+      <div class="skill"><h3>Tools and deployment</h3><p>Git, GitHub, Visual Studio Code, InfinityFree, Render, GitHub Pages</p><p class="proof">Used to build and publish my projects</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p>I would like to hear about internship opportunities, or advice from people working in software, ICT, cloud or AI.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:rownyliuzzo@gmail.com">Email me</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/rowny-liuzzo">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/papa-j6">GitHub</a>
+    </div>
+  </div>
+</section>
 </main>
-<footer><div class="container footermain"><a class="brand" href="#home"><span class="mark">RL</span> ROWNY LIUZZO</a><p>Designed and built with care in Embu, Kenya.</p><a href="#home">Back to top ↑</a></div><div class="container copyright"><span>© 2026 Rowny Liuzzo</span><span>Student portfolio · Projects and learning in progress</span></div></footer>
-</body></html>
+
+<footer>
+  <div class="wrap">&copy; 2026 Rowny Liuzzo. Embu, Kenya.</div>
+</footer>
+</body>
+</html>
