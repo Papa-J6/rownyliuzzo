@@ -96,6 +96,14 @@ dd{margin:2px 0 0;font-weight:600;font-size:.97rem}
 .skill .proof{color:var(--muted);font-size:.93rem;margin-top:4px}
 
 .contact p{max-width:40em;margin:0 0 22px}
+.badges{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.badge{display:flex;gap:20px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.badge img{width:130px;height:130px;flex:none;border-radius:6px}
+.badge h3{font-family:var(--serif);font-size:1.2rem;line-height:1.25;margin:0 0 4px;color:var(--navy)}
+.badge .when{color:var(--muted);font-size:.93rem;margin:0 0 14px}
+.badge .btns{gap:10px}
+@media(max-width:780px){.badges{grid-template-columns:1fr}}
+@media(max-width:480px){.badge{flex-direction:column;align-items:flex-start}}
 footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
 </style>
 </head>
@@ -124,7 +132,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     <p class="status">I am looking for an internship in software development, ICT, cloud computing or AI. I am currently learning cloud, Linux, Python and machine learning.</p>
     <div class="btns">
       <a class="btn primary" href="#projects">See my projects</a>
-      <a class="btn ghost" href="Rowny_Liuzzo_Internship_CV.pdf">Download my CV</a>
+      <a class="btn ghost" href="Rowny_Liuzzo_Internship_CV.pdf" download="Rowny_Liuzzo_CV.pdf">Download my CV</a>
     </div>
   </div>
 </div>
@@ -236,13 +244,37 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
         <div class="when">September 2024 to September 2028 (expected), now in Year 3</div>
         <p>Coursework: Data Structures and Algorithms, Artificial Intelligence, Computer Architecture, Web Programming, System Analysis and Design.</p>
       </div>
-      <h3>Certifications</h3>
-      <div class="entry">
-        <ul>
-          <li>AI Literacy, IBM SkillsBuild (May 2026)</li>
-          <li>Getting Started with Cybersecurity, IBM SkillsBuild (September 2026)</li>
-        </ul>
-      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <h2>Certifications</h2>
+    <p class="intro">Both were completed with IBM SkillsBuild, and each can be verified online.</p>
+    <div class="badges">
+      <article class="badge">
+        <img src="badges/ai-literacy.png" width="130" height="130" alt="IBM SkillsBuild AI Literacy badge" loading="lazy">
+        <div>
+          <h3>AI Literacy</h3>
+          <p class="when">IBM SkillsBuild, issued 15 May 2026</p>
+          <div class="btns">
+            <a class="btn small primary" href="https://www.credly.com/go/Nqhx4K3O">Verify on Credly</a>
+            <a class="btn small ghost" href="certificates/ibm-ai-literacy-certificate.pdf">View certificate</a>
+          </div>
+        </div>
+      </article>
+      <article class="badge">
+        <img src="badges/cybersecurity.png" width="130" height="130" alt="IBM SkillsBuild Getting Started with Cybersecurity badge" loading="lazy">
+        <div>
+          <h3>Getting Started with Cybersecurity</h3>
+          <p class="when">IBM SkillsBuild, issued 28 September 2026</p>
+          <div class="btns">
+            <a class="btn small primary" href="https://www.credly.com/badges/282e77a5-d1ca-4f45-8751-67e2b2794475">Verify on Credly</a>
+            <a class="btn small ghost" href="certificates/ibm-getting-started-with-cybersecurity-certificate.pdf">View certificate</a>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
