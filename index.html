@@ -1,129 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rowny Liuzzo - Computer Science Student & Software Developer from Embu, Kenya. Building AgriConnect and MediFlow Kenya.">
-  <title>Rowny Liuzzo | Software Developer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <style>
-    .hero-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
-    .project-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-    .project-card:hover { transform: translateY(-12px) scale(1.03); }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfolio of Rowny Liuzzo, Computer Science student at the University of Embu.">
+<meta name="theme-color" content="#0b1220">
+<title>Rowny Liuzzo | Computer Science Student & Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-50">
-
-  <!-- Hero -->
-  <section class="hero-bg text-white py-28 md:py-32">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <h1 class="text-5xl md:text-7xl font-bold mb-4">Rowny Liuzzo</h1>
-      <p class="text-2xl md:text-3xl mb-6">Computer Science Student & Software Developer</p>
-      <p class="max-w-2xl mx-auto text-lg md:text-xl mb-10">
-        From Embu, Kenya — Building real-world solutions that solve local problems.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#projects" class="bg-white text-blue-700 px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-gray-100 transition">
-          View My Projects
-        </a>
-        <a href="#contact" class="border-2 border-white px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition">
-          Contact Me
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section class="py-20 bg-white">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-10">About Me</h2>
-      <p class="text-lg text-gray-700 max-w-3xl mx-auto text-center leading-relaxed">
-        Hello! I'm Rowny, a passionate Computer Science student from Embu, Kenya. 
-        I specialize in full-stack development with Laravel and FilamentPHP. 
-        I recently built <strong>AgriConnect</strong> (farmer marketplace) and <strong>MediFlow Kenya</strong> 
-        (Hospital Management System) — both designed for real-world use in Kenya.
-      </p>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="py-20 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12">Featured Projects</h2>
-      
-      <div class="grid md:grid-cols-2 gap-10">
-
-        <!-- AgriConnect -->
-        <div class="project-card bg-white rounded-3xl overflow-hidden shadow-xl">
-          <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449" 
-               alt="AgriConnect" class="w-full h-64 object-cover">
-          <div class="p-8">
-            <h3 class="text-2xl font-bold mb-2">AgriConnect</h3>
-            <p class="text-gray-600 mb-4">Connecting smallholder farmers in Embu directly to buyers with real-time market intelligence and zero-commission sales.</p>
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Laravel</span>
-              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">Tailwind</span>
-              <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">MySQL</span>
-            </div>
-            <a href="#" class="text-blue-600 font-medium hover:underline">View Live Project →</a>
-          </div>
-        </div>
-
-        <!-- MediFlow Kenya -->
-        <div class="project-card bg-white rounded-3xl overflow-hidden shadow-xl">
-          <img src="https://images.unsplash.com/photo-1584982751609-1f9b4c4b4b4b" 
-               alt="MediFlow Kenya" class="w-full h-64 object-cover">
-          <div class="p-8">
-            <h3 class="text-2xl font-bold mb-2">MediFlow Kenya</h3>
-            <p class="text-gray-600 mb-4">Full-featured Hospital Management System with Patient Registration, Appointments, Billing (M-Pesa & SHA), Medical Records & Role-Based Access.</p>
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Laravel</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">FilamentPHP</span>
-              <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">Livewire</span>
-            </div>
-            <a href="#" class="text-blue-600 font-medium hover:underline">View Live Project →</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12">Skills & Technologies</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="bg-gray-100 p-6 rounded-2xl text-center font-medium">Laravel</div>
-        <div class="bg-gray-100 p-6 rounded-2xl text-center font-medium">FilamentPHP</div>
-        <div class="bg-gray-100 p-6 rounded-2xl text-center font-medium">Tailwind CSS</div>
-        <div class="bg-gray-100 p-6 rounded-2xl text-center font-medium">Livewire</div>
-        <div class="bg-gray-100 p-6 rounded-2xl text-center font-medium">MySQL</div>
-        <div class="bg-gray-100 p-6 rounded-2xl text-center font-medium">Git & GitHub</div>
-        <div class="bg-gray-100 p-6 rounded-2xl text-center font-medium">PHP</div>
-        <div class="bg-gray-100 p-6 rounded-2xl text-center font-medium">Problem Solving</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="py-20 bg-blue-600 text-white text-center">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-6">Ready to Work Together?</h2>
-      <p class="text-xl mb-8">I'm currently open to internships, freelance projects, and full-time opportunities.</p>
-      <a href="#contact" class="inline-block bg-white text-blue-600 px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-gray-100">
-        Get In Touch
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-12">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <p class="mb-2">© 2026 Rowny Liuzzo. Built with passion in Embu, Kenya.</p>
-      <p class="text-sm">Currently seeking Software Development roles and opportunities.</p>
-    </div>
-  </footer>
-</body>
-</html>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header"><div class="container nav">
+<a class="brand" href="#home"><span class="mark">RL</span> ROWNY LIUZZO</a>
+<nav><a href="#projects">Projects</a><a href="#about">About</a><a href="#skills">Skills</a><a class="nav-cta" href="#contact">Contact ↗</a></nav>
+</div></header>
+<main id="main">
+<section class="hero" id="home"><div class="container hero-grid">
+<div>
+<p class="eyebrow"><span class="dot"></span> COMPUTER SCIENCE STUDENT · EMBU, KENYA</p>
+<h1>I turn ideas into <span class="gradient">practical technology.</span></h1>
+<p class="lede">I’m a Computer Science student at the University of Embu learning by building web and desktop applications, working with databases, and solving problems one project at a time.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore my projects ↓</a><a class="btn secondary" href="mailto:rownyliuzzo@gmail.com">Get in touch ↗</a></div>
+<div class="meta"><span>⌘ Web & desktop projects</span><span>◎ Open to internship learning opportunities</span></div>
+</div>
+<div class="art" aria-label="Illustration of a code editor">
+<div class="orbit one"></div><div class="orbit two"></div>
+<div class="window"><div class="windowbar"><i></i><i></i><i></i><small>building.js</small></div>
+<div class="code"><p><em>01</em> <b>const</b> developer = {</p><p><em>02</em> &nbsp; mindset: <strong>'keep learning'</strong>,</p><p><em>03</em> &nbsp; approach: <strong>'build and improve'</strong>,</p><p><em>04</em> &nbsp; focus: [</p><p><em>05</em> &nbsp;&nbsp; <strong>'web apps'</strong>,</p><p><em>06</em> &nbsp;&nbsp; <strong>'databases'</strong>,</p><p><em>07</em> &nbsp;&nbsp; <strong>'problem solving'</strong></p><p><em>08</em> &nbsp; ]</p><p><em>09</em> };</p></div><div class="windowfoot">● learning through projects <span>●</span></div></div>
+<div class="chip chip1"><b>01</b> Web applications</div><div class="chip chip2"><b>02</b> Java · Databases</div>
+</div></div></section>
+<section class="section projects" id="projects"><div class="container">
+<div class="section-head"><div><p class="eyebrow">SELECTED WORK / 01—03</p><h2>Projects built by <span class="muted">doing the work.</span></h2></div><p class="intro">Each project represents a different part of my learning: web development, application workflows, and object-oriented programming.</p></div>
+<div class="project-grid">
+<article class="card"><div class="visual agri"><span class="label">GROUP PROJECT</span><span class="index">01 / 03</span><div class="sun"></div><div class="hills"></div><div class="plant p1">✦</div><div class="plant p2">✦</div><div class="produce"><b>✳</b><span>AgriConnect<small>Farm to market</small></span></div></div><div class="cardbody"><p class="type">WEB APPLICATION · PHP / SQL</p><h3>AgriConnect</h3><p>A group project exploring how a digital platform can connect farmers and buyers. I initiated the idea and took responsibility for much of the coding and implementation.</p><div class="tags"><span>PHP</span><span>SQL</span><span>HTML & CSS</span><span>JavaScript</span><span>Bootstrap</span></div><ul><li>Worked across the interface, server-side logic, and database features.</li><li>Implemented user interaction and messaging-related functionality.</li><li>Practised debugging database, session, and deployment issues.</li></ul><div class="projectlinks"><a href="https://agriconnect-rowny.infinityfreeapp.com/" target="_blank" rel="noopener">Try demo ↗</a><small>Demo availability may vary</small></div></div></article>
+<article class="card"><div class="visual med"><span class="label">PERSONAL PROTOTYPE</span><span class="index">02 / 03</span><div class="dashboard"><aside><b>m.</b><span>▦</span><span>♙</span><span>▤</span><span>⌁</span></aside><div class="dashcontent"><small>OVERVIEW</small><h4>Clinic dashboard</h4><div class="stats"><span>Patients<b>Patient list</b></span><span>Appointments<b>Schedule</b></span><span>Records<b>Medical</b></span></div><div class="chart"><b>Activity overview</b><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div></div><div class="cardbody"><p class="type">CLINIC MANAGEMENT · AI-ASSISTED DEVELOPMENT</p><h3>MediFlow Kenya</h3><p>A personal clinic-management prototype built with Laravel/PHP, with AI-assisted support during development. It explores common clinic workflows through a patient-facing page and admin dashboard.</p><div class="tags"><span>Laravel / PHP</span><span>Database workflows</span><span>Admin dashboard</span></div><ul><li>Explored patient registration and appointment booking flows.</li><li>Created dashboard areas for patients, doctors, records, lab, pharmacy, and more.</li><li>Used AI as a development aid while iterating on the application.</li></ul><div class="projectlinks"><a href="https://mediflow-kenya.onrender.com/" target="_blank" rel="noopener">Open prototype ↗</a><small>Not for real patient data</small></div></div></article>
+<article class="card bankcard"><div class="visual bank"><span class="label">INDIVIDUAL PROJECT</span><span class="index">03 / 03</span><div class="bankui"><div class="bankhead"><b>B</b><span>EMBER BANK<small>ACCOUNT OVERVIEW</small></span></div><div class="balance"><small>AVAILABLE BALANCE</small><strong>••••••••</strong><small>ACCOUNT HOLDER</small><b>Customer account</b></div><div class="bankactions"><span>＋ Deposit</span><span>↗ Transfer</span><span>↙ Withdraw</span></div><hr><small>Recent activity</small><div class="fake-line"></div><div class="fake-line short"></div></div></div><div class="cardbody"><p class="type">DESKTOP APPLICATION · JAVA</p><h3>Embu Bank System</h3><p>An individual Java desktop banking application built with Swing and an H2 database. This project gave me practice connecting a graphical interface to stored data.</p><div class="tags"><span>Java</span><span>Java Swing</span><span>H2 Database</span><span>OOP</span></div><ul><li>Built a desktop interface for banking-related operations.</li><li>Practised object-oriented programming and database integration.</li><li>Worked through testing and debugging during development.</li></ul><div class="projectlinks"><span>Individual build ✦</span><small>Source/demo link not yet added</small></div></div></article>
+</div></div></section>
+<section class="section about" id="about"><div class="container aboutgrid"><div><p class="eyebrow">A LITTLE ABOUT ME / 04</p><h2>Learning by building.<br><span class="muted">Growing with every iteration.</span></h2></div><div class="aboutcopy"><p>I’m pursuing a BSc in Computer Science at the University of Embu. I enjoy turning ideas into working prototypes and learning how the parts of an application fit together—from the interface to the database.</p><p>I’m still strengthening my programming foundations, and I treat each project as a chance to understand more, debug better, and become more independent as a developer. I also use AI tools as assistants while continuing to learn the code and decisions behind the work.</p><div class="callout"><b>↳</b><p><strong>What I’m looking for</strong><br>Internship opportunities where I can contribute, learn from experienced people, and grow my practical software and ICT skills.</p></div></div></div></section>
+<section class="section skills" id="skills"><div class="container"><div class="section-head"><div><p class="eyebrow">TOOLS & FOUNDATIONS / 05</p><h2>What I’ve been <span class="muted">working with.</span></h2></div><p class="intro">Technologies used in my projects and topics I’m continuing to develop.</p></div><div class="skillsgrid">
+<div class="skill"><small>01</small><h3>Web development</h3><p>PHP, JavaScript, HTML, CSS, Bootstrap</p><div class="meter"><i style="width:76%"></i></div><label>Used in web project work</label></div>
+<div class="skill"><small>02</small><h3>Programming</h3><p>Java, object-oriented programming</p><div class="meter"><i style="width:58%"></i></div><label>Building confidence through practice</label></div>
+<div class="skill"><small>03</small><h3>Databases</h3><p>SQL, MySQL concepts, H2 database</p><div class="meter"><i style="width:65%"></i></div><label>Queries and application integration</label></div>
+<div class="skill"><small>04</small><h3>Developer workflow</h3><p>Git, GitHub, debugging, deployment basics</p><div class="meter"><i style="width:60%"></i></div><label>Learning through iteration</label></div>
+</div><p class="footnote">Skill bars are visual summaries of my current learning focus, not formal proficiency scores.</p></div></section>
+<section class="section contact" id="contact"><div class="container contactbox"><div class="decoration">↗</div><p class="eyebrow">HAVE AN OPPORTUNITY? / 06</p><h2>Let’s connect and<br><span class="gradient">keep building.</span></h2><p class="contactcopy">I’m happy to connect with developers, mentors, fellow students, and teams offering internship or learning opportunities.</p><div class="actions center"><a class="btn primary" href="mailto:rownyliuzzo@gmail.com">rownyliuzzo@gmail.com ↗</a><a class="btn secondary" href="https://www.linkedin.com/in/rowny-liuzzo" target="_blank" rel="noopener">LinkedIn ↗</a><a class="btn secondary" href="https://github.com/papa-j6" target="_blank" rel="noopener">GitHub ↗</a></div></div></section>
+</main>
+<footer><div class="container footermain"><a class="brand" href="#home"><span class="mark">RL</span> ROWNY LIUZZO</a><p>Designed and built with care in Embu, Kenya.</p><a href="#home">Back to top ↑</a></div><div class="container copyright"><span>© 2026 Rowny Liuzzo</span><span>Student portfolio · Projects and learning in progress</span></div></footer>
+</body></html>
